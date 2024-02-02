@@ -11,10 +11,7 @@ class Solution {
         int resInt1 = Integer.valueOf(resStr1);
         int resInt2 = Integer.valueOf(resStr2);
         
-        if(resInt1 >= resInt2)
-            answer = resInt1;
-        else
-            answer = resInt2;
+        answer = resInt1 >= resInt2 ? resInt1 : resInt2;
         
         return answer;
     }
