@@ -2,20 +2,21 @@ class Solution {
     public int solution(String ineq, String eq, int n, int m) {
         int answer = 0;
         
-        char comp = ineq.charAt(0);
-        char match = eq.charAt(0);
+        String comp = ineq + eq;
         
-        if(comp == '>') {
-            if(match == '=')
+        switch(comp) {
+            case ">=" :
                 answer = n >= m ? 1 : 0;
-            else
+                break;
+            case ">!" :
                 answer = n > m ? 1 : 0;
-        }
-        else {
-            if(match == '=')
+                break;
+            case "<=" :
                 answer = n <= m ? 1 : 0;
-            else
+                break;
+            case "<!" :
                 answer = n < m ? 1 : 0;
+                break;
         }
         
         return answer;
