@@ -16,6 +16,8 @@ class Solution {
                 case 'a' :
                     n = n - 10;
                     break;
+                default :
+                    break;
             }
         }
         
